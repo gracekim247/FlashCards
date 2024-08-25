@@ -1,92 +1,49 @@
-.mainDiv {
-  /* width: 50%; */
+.mainDiv{
+  display: flex;
+  justify-content: center;
+  padding: auto;
+}
+
+.headerDiv{
+  position: fixed;
+  height: 5rem;
+  background-color: white;
+  width: 100%;
   margin: auto;
-  padding: 1rem;
-  padding-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: .5rem;
+  top: 0px;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 1rem;
+  /* margin: auto; */
+  margin: 0px 0px 0px 0px;
   color: darkblue;
-   font-size: xx-large;
-   font-weight: bolder;
-   font-family: monospace;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: monospace;
+  text-align: center;
 }
 
-.new-text {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
+.container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding:0;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  margin: 0;
+  padding: auto;
 }
 
-.input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-family:monospace;
-  font-size: medium;
-  border-radius: 4px;
-  border-width: 1px;
-}
-
-.add {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  font-family:monospace;
-  font-size: small;
-  border-width: 1px;
-}
-
-.containertodo {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: fit-content;
-  margin: auto;
-  
-}
-
-.todo {
-  display: flex;
-  flex-direction: row;
-  padding: .25rem;
-  padding-right: .75rem;
-  padding-left: .75rem;
-  width:auto;
-  align-self: left;
+.card{
+  border: 1px solid black;
+  margin: 25px;
+  padding: 7px;
   align-items: center;
-}
-
-.task{
-  margin: 1.5%;
-  padding-right:1rem;
-  padding-left: .30rem;
-  height: auto;
-  font-family:monospace;
-  font-size: medium;
-  
-}
-
-.trash {
-  margin:auto;  
-  margin-right: .5rem;
-  cursor: pointer;
-  font-family:monospace;
-  font-size: small;
-}
-
-
-/* flashCards */
-.header2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 2.5rem;
-  color: darkblue;
-   font-size: xx-large;
-   font-weight: bolder;
-   font-family: monospace;
+  background-color: rgb(237, 237, 237);
+  min-width: 6rem;
 }
 
 .title{
@@ -94,23 +51,90 @@
   font-size: medium;
   font-weight: bolder;
   font-family: 'Trebuchet MS', sans-serif;
+  min-width: 6rem;
 }
 
 .body{
   font-size: small;
   font-weight: 450;
   font-family:'Gill Sans';
+  min-width: 6rem;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-}
-
-.card{
-  border: 1px solid black;
-  margin: 25px;
-  padding: 7%;
+.button-container{
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 3rem;
+  margin: auto;
+  position: fixed;
+  bottom: 0px;
+  padding: auto;
+ 
+}
 
- }
+.button{
+  width: 13rem; 
+  margin: 0px 0px 0px 0px;
+  padding: 3px;
+  margin: 6px;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: small;
+}
+
+.button:hover {
+  background-color: #d1d1d1;
+  border-radius: 3px;
+  border-color: grey;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border-radius: 3px;
+}
+
+
+
+@media (max-width: 600px) {
+  .mainDiv{
+    display: grid;
+  }
+  .flashCardsDiv{
+    padding: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem; 
+  }
+
+  .container {
+    display: block;
+    min-width: min-content;
+  }
+
+  .button-container {
+    display: grid;
+    justify-self: center;
+    align-content: space-evenly;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .button {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: small;
+  }
+}
