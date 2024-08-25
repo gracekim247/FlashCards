@@ -1,9 +1,9 @@
 import React from "react";
-import TodoList from "./flashCards";
+import Flashcards from "./flashCards";
 
 
 function App() {
-  return <TodoList />
+  return <Flashcards />
 }
 
 export default App;
